@@ -1,0 +1,596 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>{% block title %}Página informativa de los componentes de las computadoras/laptops{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/images/logo/favicon.png' %}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<!-- select 2 -->
+<link rel="stylesheet" href="{% static 'assets/css/select2.min.css' %}">
+<!-- Slick -->
+<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+<!-- Jquery Ui -->
+<link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}">
+<!-- animate -->
+<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+<!-- AOS Animation -->
+<link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+<!-- Main css -->
+<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="{% static 'assets/images/icon/preloader.gif' %}" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Overlay Start ====================-->
+<div class="overlay"></div>
+<!--==================== Overlay End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Search Box Start Here ==================== -->
+ <form action="#" class="search-box">
+  <button type="button" class="search-box__close position-absolute inset-block-start-0 inset-inline-end-0 m-16 w-48 h-48 border border-gray-100 rounded-circle flex-center text-white hover-text-gray-800 hover-bg-white text-2xl transition-1">
+    <i class="ph ph-x"></i>
+  </button>
+  <div class="container">
+    <div class="position-relative">
+      <input type="text" class="form-control py-16 px-24 text-xl rounded-pill pe-64" placeholder="Buscar Componente">
+      <button type="submit" class="w-48 h-48 bg-main-600 rounded-circle flex-center text-xl text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
+        <i class="ph ph-magnifying-glass"></i>
+      </button>
+    </div>
+  </div>
+ </form>
+<!-- ==================== Search Box End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+<div class="mobile-menu scroll-sm d-lg-none d-block">
+    <button type="button" class="close-button"> <i class="ph ph-x"></i> </button>
+    <div class="mobile-menu__inner">
+        <a href="index.html" class="mobile-menu__logo">
+            <img src="assets/images/logo/INFORMATE.png" alt="Logo">
+        </a>
+        <div class="mobile-menu__menu">
+            <!-- Nav Menu Start -->
+<ul class="nav-menu flex-align nav-menu--mobile">
+    <li class="on-hover-item nav-menu__item has-submenu activePage">
+        <a href="index.html" class="nav-menu__link">Home</a>
+        <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm">
+            
+        </ul>
+        <a href="shop.html" class="nav-menu__link">Componentes</a>
+    </li>
+    
+</ul>
+<!-- Nav Menu End -->
+        </div>
+    </div>
+</div>
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+
+    <!-- ======================= Middle Top Start ========================= -->
+<div class="header-top bg-main-600 flex-between">
+    <div class="container container-lg">
+        <div class="flex-between flex-wrap gap-8">
+            
+        <ul class="header-top__right flex-align flex-wrap">
+                
+                <li class="border-right-item">
+                    <a href="account.html" class="text-white text-sm py-8 flex-align gap-6"> 
+                       
+                     </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- ======================= Middle Top End ========================= -->
+
+    <!-- ======================= Middle Header Start ========================= -->
+<header class="header-middle bg-color-one border-bottom border-gray-100">
+    <div class="container container-lg">
+        <nav class="header-inner flex-between">
+            <!-- Logo Start -->
+            <div class="logo">
+                <a href="index.html" class="link">
+                    <img src="{% static 'assets/images/logo/INFORMATE.png' %}" alt="Logo">
+                </a>
+            </div>
+            <!-- Logo End  -->
+
+            <!-- form location Start -->
+            <form action="#" class="flex-align flex-wrap form-location-wrapper">
+                <div class="search-category d-flex h-48 select-border-end-0 radius-end-0 search-form d-sm-flex d-none">
+                    <select class="js-example-basic-single border border-gray-200 border-end-0" name="state">
+                            <option value="" selected disabled>Componentes</option>
+                            <option value="cpu">Procesadores (CPU)</option>
+                            <option value="gpu">Tarjetas Gráficas (GPU)</option>
+                            <option value="ram">Memoria RAM</option>
+                            <option value="motherboard">Placas Base (Motherboards)</option>
+                            <option value="storage">Almacenamiento (SSD/HDD)</option>
+                            <option value="psu">Fuentes de Poder (PSU)</option>
+                            <option value="cooling">Sistemas de Refrigeración</option>
+                            <option value="laptop">Laptops</option>
+                            <option value="monitor">Monitores</option>
+                            <option value="peripherals">Periféricos y Accesorios</option>
+                        </select>    
+                    <div class="search-form__wrapper position-relative">
+                        <input type="text" class="search-form__input common-input py-13 ps-16 pe-18 rounded-end-pill pe-44" placeholder="Buscar componente">
+                        <button type="submit" class="w-32 h-32 bg-main-600 rounded-circle flex-center text-xl text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8"><i class="ph ph-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </form>
+            <!-- form location start -->
+             
+            <!-- Header Middle Right start -->
+            <div class="header-right flex-align d-lg-block d-none">
+                <div class="flex-align flex-wrap gap-12">
+    <button type="button" class="search-icon flex-align d-lg-none d-flex gap-4 item-hover">
+        
+    </button>
+</div>
+            </div>
+            <!-- Header Middle Right End  -->
+        </nav>
+    </div>
+</header>
+<!-- ======================= Middle Header End ========================= -->
+
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header bg-white border-bottom border-gray-100">
+    <div class="container container-lg">
+        <nav class="header-inner d-flex justify-content-between gap-8">
+            <div class="flex-align menu-category-wrapper">
+
+                <!-- Category Dropdown Start -->
+                <div class="category on-hover-item">
+                    <button type="button" class="category__button flex-align gap-8 fw-medium p-16 border-end border-start border-gray-100 text-heading">
+                        <span class="icon text-2xl d-xs-flex d-none"><i class="ph ph-dots-nine"></i></span>
+                        <span class="d-sm-flex d-none">Todos</span>Componentes
+                        <span class="arrow-icon text-xl d-flex"><i class="ph ph-caret-down"></i></span>
+                    </button>
+
+                    <div class="responsive-dropdown on-hover-dropdown common-dropdown nav-submenu p-0 submenus-submenu-wrapper">
+
+                        <button type="button" class="close-responsive-dropdown rounded-circle text-xl position-absolute inset-inline-end-0 inset-block-start-0 mt-4 me-8 d-lg-none d-flex"> <i class="ph ph-x"></i> </button>
+
+
+                        <!-- Logo Start -->
+                        <div class="logo px-16 d-lg-none d-block">
+                            <a href="index.html" class="link">
+                                <img src="assets/images/logo/INFORMATE.png" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- Logo End -->
+
+                         <ul class="scroll-sm p-0 py-8 w-300 max-h-400 overflow-y-auto">
+                            <li class="has-submenus-submenu">
+                                <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0"> 
+    <span class="text-xl d-flex"><i class="ph ph-cpu"></i></span>
+    <span>Procesadores (CPU)</span>
+    <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+</a>
+<!--
+<div class="submenus-submenu py-16">
+    <h6 class="text-lg px-16 submenus-submenu__title">Procesadores (CPU)</h6>
+    <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+        <li>
+            <a href="shop.html">Intel Core i3/i5/i7/i9</a>
+        </li>
+        <li>
+            <a href="shop.html">AMD Ryzen 3/5/7/9</a>
+        </li>
+        <li>
+            <a href="shop.html">Procesadores para laptops</a>
+        </li>
+        <li>
+            <a href="shop.html">Procesadores para gaming</a>
+        </li>
+        <li>
+            <a href="shop.html">Procesadores para productividad</a>
+        </li>
+        <li>
+            <a href="shop.html">Generaciones y sockets</a>
+        </li>
+    </ul>
+</div>-->
+                            <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-monitor-play"></i></span>
+        <span>Tarjetas Gráficas (GPU)</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Tarjetas Gráficas (GPU)</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">NVIDIA GeForce RTX</a>
+            </li>
+            <li>
+                <a href="shop.html">AMD Radeon RX</a>
+            </li>
+            <li>
+                <a href="shop.html">GPUs para gaming</a>
+            </li>
+            <li>
+                <a href="shop.html">GPUs para edición y diseño</a>
+            </li>
+            <li>
+                <a href="shop.html">GPUs externas (eGPU)</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+                            <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-memory"></i></span>
+        <span>Memoria RAM</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Memoria RAM</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">DDR4 vs DDR5</a>
+            </li>
+            <li>
+                <a href="shop.html">RAM para PC de escritorio</a>
+            </li>
+            <li>
+                <a href="shop.html">RAM para laptops</a>
+            </li>
+            <li>
+                <a href="shop.html">Frecuencia y latencia</a>
+            </li>
+            <li>
+                <a href="shop.html">Capacidad recomendada</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+                            <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-cpu"></i></span>
+        <span>Placas Base (Motherboards)</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Placas Base (Motherboards)</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Intel vs AMD</a>
+            </li>
+            <li>
+                <a href="shop.html">Chipsets (B550, Z790, etc.)</a>
+            </li>
+            <li>
+                <a href="shop.html">Factores de forma (ATX, mATX, ITX)</a>
+            </li>
+            <li>
+                <a href="shop.html">Compatibilidad con CPU y RAM</a>
+            </li>
+            <li>
+                <a href="shop.html">Conectividad y puertos</a>
+            </li>
+            <li>
+                <a href="shop.html">Motherboards para laptops</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+                            <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-hard-drive"></i></span>
+        <span>Almacenamiento (SSD/HDD)</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Almacenamiento (SSD/HDD)</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Discos Duros (HDD)</a>
+            </li>
+            <li>
+                <a href="shop.html">Unidades de Estado Sólido (SSD)</a>
+            </li>
+            <li>
+                <a href="shop.html">Formatos: SATA, M.2, NVMe</a>
+            </li>
+            <li>
+                <a href="shop.html">Almacenamiento externo</a>
+            </li>
+            <li>
+                <a href="shop.html">Capacidades y velocidad</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+                           <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-battery-full"></i></span>
+        <span>Fuentes de Poder (PSU)</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Fuentes de Poder (PSU)</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Potencia recomendada (Watts)</a>
+            </li>
+            <li>
+                <a href="shop.html">Certificación 80 Plus</a>
+            </li>
+            <li>
+                <a href="shop.html">Modular vs No Modular</a>
+            </li>
+            <li>
+                <a href="shop.html">PSU para PC gamer</a>
+            </li>
+            <li>
+                <a href="shop.html">Protecciones y eficiencia</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+                            <li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-fan"></i></span>
+        <span>Sistemas de Enfriamiento</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Sistemas de Enfriamiento</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Ventiladores (Fans)</a>
+            </li>
+            <li>
+                <a href="shop.html">Disipadores de Calor (Heat sinks)</a>
+            </li>
+            <li>
+                <a href="shop.html">Refrigeración Líquida</a>
+            </li>
+            <li>
+                <a href="shop.html">Sistemas para laptops</a>
+            </li>
+            <li>
+                <a href="shop.html">Control y monitoreo de temperatura</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+<li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-laptop"></i></span>
+        <span>Laptops y dispositivos portátiles</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Laptops y dispositivos portátiles</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Modelos y gamas</a>
+            </li>
+            <li>
+                <a href="shop.html">Procesadores para laptops</a>
+            </li>
+            <li>
+                <a href="shop.html">Memoria RAM y almacenamiento</a>
+            </li>
+            <li>
+                <a href="shop.html">Tarjetas gráficas móviles</a>
+            </li>
+            <li>
+                <a href="shop.html">Baterías y autonomía</a>
+            </li>
+            <li>
+                <a href="shop.html">Tipos y tamaños de pantallas</a>
+            </li>
+            <li>
+                <a href="shop.html">Accesorios específicos para laptops</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+<li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-monitor"></i></span>
+        <span>Monitores</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!---
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Monitores</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Tamaños y resoluciones</a>
+            </li>
+            <li>
+                <a href="shop.html">Tipos de panel (IPS, TN, VA)</a>
+            </li>
+            <li>
+                <a href="shop.html">Frecuencia de actualización</a>
+            </li>
+            <li>
+                <a href="shop.html">Monitores curvos y ultrapanorámicos</a>
+            </li>
+            <li>
+                <a href="shop.html">Conectividad y puertos</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+<li class="has-submenus-submenu">
+    <a href="javascript:void(0)" class="text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0">
+        <span class="text-xl d-flex"><i class="ph ph-keyboard"></i></span>
+        <span>Periféricos y accesorios</span>
+        <span class="icon text-md d-flex ms-auto"><i class="ph ph-caret-right"></i></span>
+    </a>
+    <!--
+    <div class="submenus-submenu py-16">
+        <h6 class="text-lg px-16 submenus-submenu__title">Periféricos y accesorios</h6>
+        <ul class="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
+            <li>
+                <a href="shop.html">Teclados y ratones</a>
+            </li>
+            <li>
+                <a href="shop.html">Auriculares y micrófonos</a>
+            </li>
+            <li>
+                <a href="shop.html">Webcams y cámaras</a>
+            </li>
+            <li>
+                <a href="shop.html">Almacenamiento externo</a>
+            </li>
+            <li>
+                <a href="shop.html">Bases y soportes</a>
+            </li>
+            <li>
+                <a href="shop.html">Cables y adaptadores</a>
+            </li>
+        </ul>
+    </div>-->
+</li>
+
+                        </ul>
+                    </div>
+                </div> 
+                <!-- Category Dropdown End  -->
+    
+                <!-- Menu Start  -->
+                <div class="header-menu d-lg-block d-none">
+                    <!-- Nav Menu Start -->
+<ul class="nav-menu flex-align ">
+    <li class="on-hover-item nav-menu__item has-submenu activePage">
+        <a href="index.html" class="nav-menu__link">Home</a>
+    </li>
+    <li class="on-hover-item nav-menu__item has-submenu">
+        <a href="shop" class="nav-menu__link">Componentes</a>
+    </li>
+ 
+
+    
+</ul>
+<!-- Nav Menu End -->
+                </div>
+                <!-- Menu End  -->
+            </div>
+
+            <!-- Header Right start -->
+            <div class="header-right flex-align">
+               <a href="tel:01234567890" class="bg-main-600 text-white p-12 h-100 hover-bg-main-800 flex-align gap-8 text-lg d-lg-flex d-none"> 
+    <div class="d-flex text-32"><i class="ph ph-globe"></i></div>
+    INVESTIGA MAS AQUI!
+</a>
+                <div class="flex-align flex-wrap gap-12">
+    <button type="button" class="search-icon flex-align d-lg-none d-flex gap-4 item-hover">
+        <span class="text-2xl text-gray-700 d-flex position-relative item-hover__text">
+            <i class="ph ph-magnifying-glass"></i>
+        </span>
+    </button>
+</div>
+                <button type="button" class="toggle-mobileMenu d-lg-none ms-3n text-gray-800 text-4xl d-flex"> <i class="ph ph-list"></i> </button>
+            </div>
+            <!-- Header Right End  -->
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+        {% block content %}
+        <!-- Aquí va el contenido específico de cada página -->
+        {% endblock %}
+<!-- ==================== Footer Start Here ==================== -->
+
+
+<!-- bottom Footer -->
+<div class="bottom-footer bg-color-one py-8">
+    <div class="container container-lg">
+        <div class="bottom-footer__inner flex-between flex-wrap gap-16 py-16">
+            <p class="bottom-footer__text wow fadeInLeftBig">Hecho por:Ernesto Javier,Elias Castillo,Eliezer Tinoco </p>
+            <div class="flex-align gap-8 flex-wrap wow fadeInRightBig">
+                <span class="text-heading text-sm">ARQUITECTURA DE MAQUINAS</span>
+                <img src="{% static 'assets/images/logo/INFORMATE.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==================== Footer End Here ==================== -->
+  
+
+    
+   <!-- Jquery js -->
+{% load static %}
+
+<!-- jQuery -->
+<script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
+
+<!-- Bootstrap Bundle Js -->
+<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Phosphor Icon -->
+<script src="{% static 'assets/js/phosphor-icon.js' %}"></script>
+
+<!-- Select2 -->
+<script src="{% static 'assets/js/select2.min.js' %}"></script>
+
+<!-- Slick -->
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+<!-- Count Down -->
+<script src="{% static 'assets/js/count-down.js' %}"></script>
+
+<!-- jQuery UI -->
+<script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+
+<!-- WOW.js -->
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+<!-- AOS Animation -->
+<script src="{% static 'assets/js/aos.js' %}"></script>
+
+<!-- Marquee -->
+<script src="{% static 'assets/js/marque.min.js' %}"></script>
+
+<!-- Vanilla Tilt -->
+<script src="{% static 'assets/js/vanilla-tilt.min.js' %}"></script>
+
+<!-- Counter -->
+<script src="{% static 'assets/js/counter.min.js' %}"></script>
+
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+
+
+    </body>
+</html>
